@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Giphy-API</title>
+    <script src="vendors/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+</head>
+<body ng-app="giphyApp">
+    <section ng-controller="searchController as vm">
+        <input ng-model="vm.searchText" type="text">
+        <button ng-click="vm.searchButton(vm.searchText)">Search</button>
+        <div ng-repeat="search in vm.giphySearch">
+            <img ng-src="{{search.images.original.url}}"/>
+        </div>
+    </section>
+    <section ng-controller="randomController as vm">
+            <div ng-repeat="random in vm.giphyRandom.random">
+    
+            </div>
+        </section>
+    
+</body>
+</html>
