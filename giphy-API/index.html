@@ -16,8 +16,9 @@
         </div>
     </section>
     <section ng-controller="randomController as vm">
-            <div ng-repeat="random in vm.giphyRandom.random">
-    
+            <button ng-click="vm.randomButton()">Random</button>
+            <div>
+                    <img ng-src="{{vm.giphyRandom.image_url}}"/>
             </div>
         </section>
     
