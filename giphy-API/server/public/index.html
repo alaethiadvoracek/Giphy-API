@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giphy-API</title>
+
+    <!--Angular stuff-->
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+
+    <!--Application stuff-->
+    <script src="scripts/client.js"></script>
+    <script src="/scripts/controllers/search.controller.js"></script>
+    <script src="/scripts/controllers/random.controller.js"></script>
+</head>
+<body ng-app="giphyApp">
+    <h1>Giphy App</h1>
+
+    <!-- insert our nav template -->
+    <nav ng-include="'/views/templates/nav.html'"></nav>
+
+    <main ng-view>
+        <!-- view HTML will be loaded here -->
+    </main>
+            
+    
+    
+</body>
+</html>

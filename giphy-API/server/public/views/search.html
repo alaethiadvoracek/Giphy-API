@@ -1,0 +1,7 @@
+<h2>Search for a Giphy type!</h2>
+
+<input ng-model="vm.searchText" type="text">
+        <button ng-click="vm.searchButton(vm.searchText)">Search</button>
+        <div ng-repeat="search in vm.giphySearch">
+            <img ng-src="{{search.images.original.url}}"/>
+        </div>
