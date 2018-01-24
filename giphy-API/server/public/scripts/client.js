@@ -1,6 +1,6 @@
-const giphyApp = angular.module('giphyApp', []);
+const giphyApp = angular.module('giphyApp', ['ngRoute', 'ngMaterial']);
 
-app.config(function($routeProvider) {
+giphyApp.config(function($routeProvider) {
     console.log('config loaded');
     // define our client side routes
     $routeProvider
@@ -15,5 +15,6 @@ app.config(function($routeProvider) {
         .otherwise(
             { redirectTo: '/search' }
         );
-    
+       
 });
+

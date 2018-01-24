@@ -1,7 +1,8 @@
 <h2>Search for a Giphy type!</h2>
 
 <input ng-model="vm.searchText" type="text">
-        <button ng-click="vm.searchButton(vm.searchText)">Search</button>
+        <md-button ng-click="vm.searchButton(vm.searchText)">Search</md-button>
+        <md-button class="md-primary md-raised" ng-click="mc.openToast($event)">Show Toast</md-button>
         <div ng-repeat="search in vm.giphySearch">
             <img ng-src="{{search.images.original.url}}"/>
         </div>
