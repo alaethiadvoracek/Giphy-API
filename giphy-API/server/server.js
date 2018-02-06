@@ -18,7 +18,7 @@ app.get('/giphy',(req, res) => {
         }
         }
         axios.get('http://api.giphy.com/v1/gifs/search', config).then(function(response){
-            res.send(response);
+            res.send(response.data);
         }).catch(function(err){
             console.log('Error in get request', err);
         })
