@@ -5,7 +5,7 @@ giphyApp.controller("randomController", ['$http', function($http){
     random.randomButton = function(randomText) {
         const config = {
             params: {
-                api_key: 'IrqoZw7Y90x3ZjGj5EJBIEr3AfLd2tPD'
+                api_key: process.env.API_KEY
             }
             }
         $http.get('http://api.giphy.com/v1/gifs/random', config).then(function(response){
